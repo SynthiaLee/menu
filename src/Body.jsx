@@ -30,21 +30,20 @@ function Body() {
     /*console.log(name.length);
     console.log(price.length);*/
     // console.log 를 작성하지 않아도 되는건가? 이미 데이터 상에는 있으니까?
-    
+
     if (name.length > 0 && price.length > 0) {
       if (!isNaN(price)) {
-        //must fill in both of the inputs to activate the button
         const newMenu = { name: name, price: price };
         setMenuList([...menuList, newMenu]);
         setName("");
         setPrice("");
-
-      }
-      else {
+        wo;
+      } else {
         alert("price is not a number");
       }
     } else {
       alert("please fill in both boxes ;)");
+      ``;
     }
   }
 
@@ -81,6 +80,7 @@ function Body() {
             <div className="price">{menu.price}</div>
             <button onClick={() => removeMenu(idx)}>삭제</button>
           </div>
+          // <MenuItem name={menu.name} price={menu.price} onRemove={() => removeMenu(idx)} />
         ))}
       </div>
     </div>
